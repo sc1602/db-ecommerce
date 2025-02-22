@@ -23,10 +23,10 @@ class ProductResource(Resource):
             products = ProductModel.query.filter(
                 ProductModel.status == True,
                 # ProductModel.name.like(f'%{search}%'),
-                ProductModel.created_at.between(
-                    '2025-01-01',
-                    '2025-02-19'
-                )
+                # ProductModel.created_at.between(
+                #     start_date,
+                #     end_date
+                # )
             ).paginate(
                 page=page,
                 per_page=per_page,
